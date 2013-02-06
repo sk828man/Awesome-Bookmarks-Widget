@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app ng-csp>
+  <head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/widget.js"></script>
+    <link rel="stylesheet" href="css/css.css" type="text/css" media="screen" />
+  </head>
+
+  <body ng-controller="viewCtrl">
+    <div id="bookmarks">
+      <div ng-repeat="bookmark in view" class="bkmrk-item">
+        <div ng-show="$eval('bookmark.children.length >= 0')" ng-click="changeView(bookmark.index)">
+          <img src="/img/folder.png" class="bkmrk-icon" />
+          {{ bookmark.title }}
+        </div>
+        <div ng-hide="$eval('bookmark.children.length >= 0')">
+          <a href="{{ bookmark.url }}" target="_top">
+            <img ng-src="https://www.google.com/s2/u/0/favicons?domain={{$eval('getHostname(bookmark.url)')}}" class="bkmrk-icon" />
+            {{ bookmark.title }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="crumbs">
+      <ul class="breadcrumb">
+        <li ng-repeat="crumb in crumbs">
+          <a href="#" ng-click="changeView($index, true)">{{$first && "Home" || crumb}}</a><span ng-hide="$last" class="divider">/</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

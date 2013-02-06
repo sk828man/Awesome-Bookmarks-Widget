@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #FFF;
+  font-family: "Segoe UI", "Droid Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+img {
+  border: 0;
+  width: 16px;
+  height: 16px;
+}
+
+#bookmarks {
+  position: absolute;
+  top: 0;
+  left: 0; right: 0;
+  bottom: 0;
+  padding-top: 32px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.bkmrk-item {
+  display: block;
+  cursor: pointer;
+  white-space: nowrap;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+}
+.bkmrk-item:nth-child(even) {
+  background-color: #EEEEEE;
+}
+.bkmrk-item:hover {
+  background-color: #DDDDDD;
+}
+.bkmrk-icon, .bkmrk-link {
+  display: inline-block;
+}
+.bkmrk-link {
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+  color: #0E3F96;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+#crumbs { /* aw yiss */
+  background-color: #EEE;
+  position: absolute;
+  top: 0;
+  left: 0; right: 15px;
+  height: 32px;
+  z-index: 2;
+}
+
+/*!
+ * Bootstrap v2.2.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin: 0 0 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.breadcrumb > li > .divider {
+  padding: 0 5px;
+  color: #ccc;
+}
+.breadcrumb > .active {
+  color: #999999;
+}
+
+
+::-webkit-scrollbar {
+  background: transparent;
+  overflow: visible;
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #EEE;
+  border: solid #EEE;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EEE;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  border-width: 0;
+  min-width: 100px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  border-width: 0;
+  min-height: 100px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #EEE;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
