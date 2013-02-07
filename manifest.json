@@ -6,12 +6,12 @@
     },
     "version": "1.0",
     "name": "Bookmark Widget [ANTP]",
-    "description": "Bookmark Widget! :D [ANTP]",
+    "description": "Bookmark Widget for Awesome New Tab Page.",
     "icons": {
       "128": "icon.png"
     },
     "manifest_version": 2,
     "web_accessible_resources": [ "bookmarks.html" ],
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "permissions": [ "bookmarks" ]
+    "permissions": [ "bookmarks", "storage" ]
 }

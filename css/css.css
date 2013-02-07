@@ -72,7 +72,23 @@ img {
   z-index: 2;
 }
 
-
+#pin {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  cursor: pointer;
+  opacity: 0.2;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+#pin:hover {
+  opacity: 0.4;
+}
+#pin.active {
+  opacity: .8;
+}
+#pin.active:hover {
+  opacity: .6 !important;
+}
 
 /*!
  * Bootstrap v2.2.2

@@ -29,6 +29,9 @@
           <a href="#" ng-click="changeView($index, true, $last)">{{$first && "Home" || crumb}}</a><span ng-hide="$last" class="divider">/</span>
         </li>
       </ul>
+      <div id="pin" ng-click="saveFavorite()" class="{{ favoriteActive }}">
+        <img src="/img/pin.png" />
+      </div>
     </div>
   </body>
 </html>
