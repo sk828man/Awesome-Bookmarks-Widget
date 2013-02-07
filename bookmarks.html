@@ -26,10 +26,10 @@
     <div id="crumbs">
       <ul id="breadcrumbs">
         <li ng-repeat="crumb in crumbs">
-          <a href="#" ng-click="changeView($index, true, $last)">{{$first && "Home" || crumb}}</a><span ng-hide="$last" class="divider">/</span>
+          <a href="#" ng-click="changeView($index, true, $last)" ng-class="{bold: $last == true}" title="{{$first && 'Home' || crumb}}">{{$first && 'Home' || crumb}}</a><span ng-hide="$last" class="divider">/</span>
         </li>
       </ul>
-      <div id="pin" ng-click="saveFavorite()" class="{{ favoriteActive }}">
+      <div id="pin" ng-click="saveFavorite()" class="{{ favoriteActive }}" title="Start this widget in this folder">
         <img src="/img/pin.png" />
       </div>
     </div>
