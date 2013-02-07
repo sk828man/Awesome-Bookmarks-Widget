@@ -24,11 +24,14 @@ function viewCtrl($scope) {
   };
 
 
-  $scope.changeView = function(view, up) {
-    if ( up && view < $scope.path.length ) {
+  $scope.changeView = function(view, up, last) {
+    if ( last )
+      return;
+
+    if ( up && view + 1 < $scope.path.length ) {
       $scope.path.pop();
       return $scope.changeView(view, up);
-    } else {
+    } else if ( !up ) {
       $scope.path.push(view);
     }
 
