@@ -10,16 +10,16 @@
   <body ng-controller="viewCtrl">
     <div id="bookmarks">
       <div ng-repeat="bookmark in view" class="bkmrk-item">
-        <div ng-show="$eval('bookmark.children.length >= 0')" ng-click="changeView(bookmark.index)">
-          <img src="/img/folder.png" class="bkmrk-icon" />
-          {{ bookmark.title }}
-        </div>
-        <div ng-hide="$eval('bookmark.children.length >= 0')">
-          <a href="{{ bookmark.url }}" target="_top">
+        <a href="{{ bookmark.url || '#' }}" target="{{ bookmark.url && '_top' || ''}}">
+          <div ng-show="$eval('bookmark.children.length >= 0')" ng-click="changeView(bookmark.index)">
+            <img src="/img/folder.png" class="bkmrk-icon" />
+            {{ bookmark.title }}
+          </div>
+          <div ng-hide="$eval('bookmark.children.length >= 0')">
             <img ng-src="https://www.google.com/s2/u/0/favicons?domain={{$eval('getHostname(bookmark.url)')}}" class="bkmrk-icon" />
             {{ bookmark.title }}
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
 
