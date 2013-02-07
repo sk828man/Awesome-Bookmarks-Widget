@@ -21,6 +21,7 @@ function viewCtrl($scope) {
     }
 
     $scope.view = view;
+    setTimeout($scope.crumbHeight, 100)
   };
 
 
@@ -38,6 +39,11 @@ function viewCtrl($scope) {
     $scope.crumbs = [];
     $scope.getView($scope.tree, $scope.path);
   };
+
+  $scope.crumbHeight = function() {
+    $("#bookmarks").css("padding-top", $("#crumbs").height());
+  }
+  $(window).bind("resize", $scope.crumbHeight);
 
   $scope.getHostname = function(url) {
     return $("<a href='" + url + "'></a>")[0].hostname;

@@ -24,7 +24,7 @@
     </div>
 
     <div id="crumbs">
-      <ul class="breadcrumb">
+      <ul id="breadcrumbs">
         <li ng-repeat="crumb in crumbs">
           <a href="#" ng-click="changeView($index, true, $last)">{{$first && "Home" || crumb}}</a><span ng-hide="$last" class="divider">/</span>
         </li>

@@ -69,9 +69,10 @@ img {
   position: absolute;
   top: 0;
   left: 0; right: 15px;
-  height: 32px;
   z-index: 2;
 }
+
+
 
 /*!
  * Bootstrap v2.2.2
@@ -82,57 +83,56 @@ img {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.breadcrumb {
-  padding: 8px 15px;
-  margin: 0 0 20px;
-  list-style: none;
-  background-color: #f5f5f5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.breadcrumb > li {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  text-shadow: 0 1px 0 #ffffff;
-}
-.breadcrumb > li > .divider {
-  padding: 0 5px;
-  color: #ccc;
-}
-.breadcrumb > .active {
-  color: #999999;
-}
+  .clearfix {
+    *zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+  .input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #breadcrumbs {
+    padding: 8px 15px;
+    margin: 0 0 0;
+    list-style: none;
+    background-color: #f5f5f5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  #breadcrumbs > li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #ffffff;
+    max-height: 51px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #breadcrumbs > li > .divider {
+    padding: 0 5px;
+    color: #ccc;
+  }
+  #breadcrumbs > .active {
+    color: #999999;
+  }
 
 
 ::-webkit-scrollbar {
