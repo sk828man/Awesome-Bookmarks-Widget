@@ -5,10 +5,10 @@
       "persistent": false
     },
     "version": "1.0",
-    "name": "Bookmark Widget [ANTP]",
-    "description": "Bookmark Widget for Awesome New Tab Page.",
+    "name": "Awesome Bookmarks Widget [ANTP]",
+    "description": "Awesome read-only bookmark widget for Awesome New Tab Page. Resizable and multi-placeable. [ANTP]",
     "icons": {
-      "128": "icon.png"
+      "128": "star.png"
     },
     "manifest_version": 2,
     "web_accessible_resources": [ "bookmarks.html" ],
