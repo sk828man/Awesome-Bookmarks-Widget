@@ -4,7 +4,7 @@
       "scripts": [ "js/background.js" ],
       "persistent": false
     },
-    "version": "1.0",
+    "version": "2013.106.105.0",
     "name": "Awesome Bookmarks Widget [ANTP]",
     "description": "Awesome read-only bookmark widget for Awesome New Tab Page. Resizable and multi-placeable. [ANTP]",
     "icons": {
@@ -13,5 +13,5 @@
     "manifest_version": 2,
     "web_accessible_resources": [ "bookmarks.html" ],
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "permissions": [ "bookmarks", "storage" ]
+    "permissions": [ "bookmarks", "storage", "tabs" ]
 }

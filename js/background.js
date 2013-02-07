@@ -30,5 +30,11 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     chrome.bookmarks.getTree(sendResponse);
   }
 
+  if ( request.type === "manageBookmarks" ) {
+    chrome.tabs.update(sender.tab.id, {
+      url: "chrome://bookmarks/#" + request.id,
+    });
+  }
+
   return true;
 });

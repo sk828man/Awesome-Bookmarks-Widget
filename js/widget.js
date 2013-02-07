@@ -1,3 +1,8 @@
+/*
+  Awesome Bookmark Bar
+  © 2013 Michael Hart / Awesome New Tab Page
+*/
+
 function viewCtrl($scope) {
 
   $scope.tree = null;
@@ -24,6 +29,7 @@ function viewCtrl($scope) {
   $scope.update = function(tree) {
     $scope.tree = tree;
     $scope.crumbs = [];
+
     $scope.getView($scope.tree, $scope.path);
     $scope.$apply();
   };
@@ -31,6 +37,7 @@ function viewCtrl($scope) {
   $scope.getView = function(view, array) {
     if ( array.length > 0 ) {
       $scope.crumbs.push(view[array[0]].title);
+      $scope.viewId = view[array[0]].id;
       view = view[array[0]].children;
       array = removeElements(array, 0);
       return $scope.getView(view, array);
@@ -57,10 +64,12 @@ function viewCtrl($scope) {
     $scope.getView($scope.tree, $scope.path);
   };
 
-  $scope.crumbHeight = function() {
-    $("#bookmarks").css("padding-top", $("#crumbs").height());
-  };
-  $(window).bind("resize", $scope.crumbHeight);
+  $scope.manageBookmarks = function() {
+    chrome.extension.sendMessage({
+      type: "manageBookmarks",
+      id: $scope.viewId
+    }, $scope.loadFavorite);
+  }
 
   $scope.saveFavorite = function() {
     var toSave = {};
@@ -73,6 +82,10 @@ function viewCtrl($scope) {
     return $("<a href='" + url + "'></a>")[0].hostname;
   };
 
+  $scope.crumbHeight = function() {
+    $("#bookmarks").css("padding-top", $("#crumbs").height());
+  };
+  $(window).bind("resize", $scope.crumbHeight);
   chrome.extension.sendMessage({type: "bookmarkTree"}, $scope.loadFavorite);
 }
 
