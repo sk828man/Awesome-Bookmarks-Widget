@@ -35,6 +35,9 @@ img {
   overflow-x: hidden;
 }
 
+.bold {
+  font-weight: bold;
+}
 
 .bkmrk-title {
   overflow: hidden;
@@ -144,7 +147,7 @@ img {
   #breadcrumbs > li {
     display: inline-block;
     text-shadow: 0 1px 0 #ffffff;
-    max-height: 51px;
+    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
